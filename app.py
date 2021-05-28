@@ -6,7 +6,6 @@ model = None
 
 
 def detectLanguage(text):
-    import numpy as np
     import string
     import re
     import pickle
@@ -14,7 +13,7 @@ def detectLanguage(text):
     # replacing puncutations with None or ''
     translate_table = {ord(char): None for char in string.punctuation}
 
-    with open('languagedetection/model/LDModel.pkl', 'rb') as files:
+    with open('model/LDModel.pkl', 'rb') as files:
         model = pickle.load(files)
 
     text = text.lower()
