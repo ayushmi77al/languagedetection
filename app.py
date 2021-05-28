@@ -36,7 +36,6 @@ def predict():
         return render_template("index.html")
 
     Text = request.form['text']
-
     output = detectLanguage(Text)
 
     return render_template('index.html', Detected_Language=f'Language is {output}')
