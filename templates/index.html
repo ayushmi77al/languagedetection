@@ -12,9 +12,10 @@
     <fieldset>
         <div>
             <form action="{{ url_for('predict') }}" method="POST">
-                <h2>Language Prediction</h2>
+                <h2>Language Detection</h2>
 
-                <textarea name="text" id="txt" cols="50" rows="100" required placeholder="Enter Text (minimum 5 words for better result :)" ></textarea>
+                <textarea name="text" id="txt" cols="50" rows="100" required
+                    placeholder="Enter Text (minimum 5 words for better result :)"></textarea>
 
                 <br>
 
@@ -25,6 +26,7 @@
     </fieldset>
     <fieldset>
         <h3 id="output">{{ Detected_Language }}</h3>
+        <h6>*Supported Languges - English, French, Spanish, Hindi, Portugeese, Italian, Russian, Sweedish, Malayalam, Dutch, Arabic, Turkish, German, Tamil, Danish, Kannada, Greek</h6>
     </fieldset>
 
     <style>
@@ -50,7 +52,7 @@
             font-size: 20px;
             text-align: center;
             margin: 2px;
-            height: 400px;
+            height: 380px;
             width: 600px;
         }
 
@@ -62,13 +64,9 @@
 
         #output {
             color: rgb(212, 57, 57);
-            font-size:x-large;
-            font-family:'Comic sans MS';
-            }
-
-         
-        
-
+            font-size: x-large;
+            font-family: 'Comic sans MS';
+        }
     </style>
 
 </body>
